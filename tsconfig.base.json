@@ -17,6 +17,12 @@
     "paths": {
       "@ticket/private-api/core//database": [
         "libs/private-api/core/database/src/index.ts"
+      ],
+      "@ticket/private-api/core/prisma": [
+        "libs/private-api/core/prisma/src/index.ts"
+      ],
+      "@ticket/private-api/feature/auth": [
+        "libs/private-api/feature/auth/src/index.ts"
       ]
     }
   },
