@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'private-api-core--database',
+  displayName: 'private-api-core-database',
   preset: '../../../../jest.preset.js',
   globals: {
     'ts-jest': {

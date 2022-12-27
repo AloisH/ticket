@@ -1,5 +1,5 @@
 {
-  "name": "private-api-core--database",
+  "name": "private-api-core-database",
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/private-api/core/database/src",
   "projectType": "library",
