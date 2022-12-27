@@ -1,0 +1,63 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             Int             @id @default(autoincrement())
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  deletedAt      DateTime?
+  email          String          @unique
+  role           String
+  permissionRole String          @default("user")
+  firstName      String
+  lastName       String
+  passwordHash   String
+  Ticket         Ticket[]
+  Category       Category[]
+  TicketContent  TicketContent[]
+}
+
+model Category {
+  id        Int       @id @default(autoincrement())
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  deletedAt DateTime?
+  name      String
+  iconName  String
+  Ticket    Ticket[]
+  Subcriber User[]
+}
+
+model Ticket {
+  id            Int             @id @default(autoincrement())
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  deletedAt     DateTime?
+  status        String
+  author        User            @relation(fields: [authorId], references: [id])
+  authorId      Int
+  category      Category        @relation(fields: [categoryId], references: [id])
+  categoryId    Int
+  TicketContent TicketContent[]
+}
+
+model TicketContent {
+  id        Int       @id @default(autoincrement())
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  deletedAt DateTime?
+  content   String
+  author    User      @relation(fields: [authorId], references: [id])
+  authorId  Int
+  ticket    Ticket    @relation(fields: [ticketId], references: [id])
+  ticketId  Int
+}
