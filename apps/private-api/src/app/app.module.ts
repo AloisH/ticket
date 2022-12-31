@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
-import { PrivateApiCorePrismaModule } from '@ticket/private-api/core/prisma';
+import { PrivateApiFeatureAuthModule } from '@ticket/private-api/feature/auth';
 
 @Module({
-  imports: [PrivateApiCorePrismaModule],
+  imports: [PrivateApiFeatureAuthModule],
 })
 export class AppModule {}

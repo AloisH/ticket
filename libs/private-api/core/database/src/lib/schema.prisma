@@ -20,7 +20,8 @@ model User {
   permissionRole String          @default("user")
   firstName      String
   lastName       String
-  passwordHash   String
+  passwordSet    Boolean         @default(false)
+  passwordHash   String?
   Ticket         Ticket[]
   Category       Category[]
   TicketContent  TicketContent[]

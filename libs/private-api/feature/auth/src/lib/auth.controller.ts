@@ -11,23 +11,23 @@ export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
   @Post('signup')
-  public async signup(@Body() signupDto: SignupDto): Promise<UserDto> {
+  public async createAccount(@Body() signupDto: SignupDto): Promise<UserDto> {
     return this.authService.signup(signupDto);
   }
 
   @Post('login')
   public async login(@Body() loginDto: LoginDto): Promise<TokenDto> {
-    return;
+    return this.authService.login(loginDto);
   }
 
   @Post('activated')
   public async activated(@Body() activatedDto: ActivatedDto): Promise<boolean> {
-    return;
+    return this.authService.activated(activatedDto);
   }
 
   @Get('logout')
   public async logout(): Promise<void> {
-    return;
+    return this.authService.logout();
   }
 
   @Get('refresh')
