@@ -22,6 +22,7 @@ model User {
   lastName       String
   passwordSet    Boolean         @default(false)
   passwordHash   String?
+  refreshToken   String?
   Ticket         Ticket[]
   Category       Category[]
   TicketContent  TicketContent[]

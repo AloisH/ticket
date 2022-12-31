@@ -10,4 +10,5 @@ export interface UserModel {
   lastName: string;
   passwordHash: string;
   passwordSet: boolean;
+  refreshToken: string;
 }
