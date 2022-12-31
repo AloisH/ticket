@@ -23,11 +23,25 @@ export class AuthService {
   }
 
   public async login(loginDto: LoginDto): Promise<TokenDto> {
+    const user = await this.userRepository.findByEmail(loginDto.email);
+    if (!user) {
+      throw new BadRequestException('User does not exist');
+    }
+
+    if (!user.passwordSet) {
+      throw new BadRequestException('User has not set password');
+    }
+
     return;
   }
 
   public async activated(activatedDto: ActivatedDto): Promise<boolean> {
-    return;
+    const user = await this.userRepository.findByEmail(activatedDto.email);
+    if (!user) {
+      return true;
+    }
+
+    return user.passwordSet;
   }
 
   public async logout(): Promise<void> {

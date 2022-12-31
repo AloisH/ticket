@@ -9,4 +9,5 @@ export interface UserModel {
   firstName: string;
   lastName: string;
   passwordHash: string;
+  passwordSet: boolean;
 }
