@@ -1,0 +1,29 @@
+{
+  "eslint.validate": ["json"],
+  "jestrunner.configPath": "jest.config.ts",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "dist": false,
+    ".scannerwork": true,
+    ".angular": true,
+    "coverage": true,
+    ".github": true,
+    ".circleci": true,
+    ".husky": true,
+    "node_modules": true,
+    "**/.gitkeep": true
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "docker-compose.yml": "docker-compose.*.yml, .dockerignore, Dockerfile*, nginx.conf",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, .nvmrc",
+    "nx.json": "angular.json, decorate-angular-cli.js, migrations.json",
+    ".eslintrc.json": ".eslintrc.js, .eslintrc.yaml, .eslintrc.yml, .eslintrc.json5, .eslintrc, .eslintignore, .prettierignore, .prettierrc, .editorconfig",
+    "jest.config.ts": "jest*"
+  }
+}

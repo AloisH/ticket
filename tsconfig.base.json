@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@ticket/frontend/core/global-scss": [
+        "libs/frontend/core/global-scss/src/index.ts"
+      ],
       "@ticket/private-api/core//database": [
         "libs/private-api/core/database/src/index.ts"
       ],
