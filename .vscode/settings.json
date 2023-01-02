@@ -15,7 +15,7 @@
     ".github": true,
     ".circleci": true,
     ".husky": true,
-    "node_modules": true,
+    "node_modules": false,
     "**/.gitkeep": true
   },
   "explorer.fileNesting.enabled": true,
