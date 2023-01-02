@@ -1,3 +1,5 @@
+@import 'font';
+
 /*
  * Reset
  * Inspired from: https://piccalil.li/blog/a-modern-css-reset/
@@ -45,6 +47,7 @@ html:focus-within {
 /* Set core body defaults */
 body {
   min-height: 100vh;
+  font-family: $font-family-sans-serif;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
