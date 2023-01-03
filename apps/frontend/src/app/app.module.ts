@@ -1,8 +1,10 @@
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FrontendFeatureLoginPageModule } from '@ticket/frontend/feature/login-page';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { TokenInterceptor } from '@ticket/frontend/core/http-interceptor';
 import { appRoutes } from './app.routes';
 
 @NgModule({
@@ -12,7 +14,13 @@ import { appRoutes } from './app.routes';
     RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
     FrontendFeatureLoginPageModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

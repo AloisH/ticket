@@ -18,8 +18,6 @@ export class IsSignGuard implements CanActivate {
           return;
         }
 
-        console.log(authStatus);
-
         if (!authStatus.isAuthenticated) {
           this.router.navigateByUrl('/login');
         }

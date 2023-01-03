@@ -16,8 +16,15 @@
     "baseUrl": ".",
     "paths": {
       "@ticket/frontend/core/api": ["libs/frontend/core/api/src/index.ts"],
+      "@ticket/frontend/core/auth": ["libs/frontend/core/auth/src/index.ts"],
       "@ticket/frontend/core/global-scss": [
         "libs/frontend/core/global-scss/src/index.ts"
+      ],
+      "@ticket/frontend/core/http-interceptor": [
+        "libs/frontend/core/http-interceptor/src/index.ts"
+      ],
+      "@ticket/frontend/core/local-storage": [
+        "libs/frontend/core/local-storage/src/index.ts"
       ],
       "@ticket/frontend/feature/login-page": [
         "libs/frontend/feature/login-page/src/index.ts"

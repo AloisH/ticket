@@ -8,9 +8,11 @@ import {
 } from './login-page.formly';
 
 import { ApiAuthService } from '@ticket/frontend/core/api';
+import { AuthService } from '@ticket/frontend/core/auth';
 import { Component } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { FormlyFieldConfig } from '@ngx-formly/core';
+import { ThisReceiver } from '@angular/compiler';
 
 enum LoginPageState {
   Activated,
@@ -29,7 +31,7 @@ export class LoginPageComponent {
   model = {};
   fields: FormlyFieldConfig[];
 
-  constructor(private readonly apiAuth: ApiAuthService) {
+  constructor(private readonly apiAuth: ApiAuthService, private readonly auth: AuthService) {
     this.fields = activatedFormField;
   }
 
@@ -66,9 +68,7 @@ export class LoginPageComponent {
   }
 
   onLogin() {
-    this.apiAuth.login(this.model as LoginForm).subscribe((tokenDto) => {
-      console.log(tokenDto);
-    });
+    this.auth.login(this.model as LoginForm);
   }
 
   onPasswordSet() {
