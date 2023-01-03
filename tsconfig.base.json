@@ -21,6 +21,7 @@
       "@ticket/frontend/feature/login-page": [
         "libs/frontend/feature/login-page/src/index.ts"
       ],
+      "@ticket/frontend/ui/form": ["libs/frontend/ui/form/src/index.ts"],
       "@ticket/private-api/core//database": [
         "libs/private-api/core/database/src/index.ts"
       ],

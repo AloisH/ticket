@@ -1,2 +1,12 @@
 <div class="title">Ticket</div>
-<div>Ici le formulaire de connexion</div>
+
+<form [formGroup]="form">
+  <formly-form [form]="form" [fields]="fields" [model]="model"></formly-form>
+  <button
+    pButton
+    type="button"
+    label="Se connecter"
+    class="btn-submit"
+    icon="pi pi-sign-in"
+  ></button>
+</form>

@@ -1,4 +1,5 @@
 :host {
+  padding-top: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,4 +10,9 @@
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
+}
+
+.btn-submit {
+  margin-top: 1rem;
+  width: 100%;
 }
