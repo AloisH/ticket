@@ -1,10 +1,10 @@
 <div class="title">Ticket</div>
 
-<form [formGroup]="form">
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
   <formly-form [form]="form" [fields]="fields" [model]="model"></formly-form>
   <button
     pButton
-    type="button"
+    type="submit"
     label="Se connecter"
     class="btn-submit"
     icon="pi pi-sign-in"
