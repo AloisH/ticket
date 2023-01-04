@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'ticket-root',
-  template: '<router-outlet></router-outlet>',
+  template: '<ticket-global-frame></ticket-global-frame>',
 })
 export class AppComponent {
   title = 'frontend';

@@ -1,3 +1,5 @@
+import { FrontendCoreGlobalFrameModule, GlobalFrameComponent } from '@ticket/frontend/core/global-frame';
+
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FrontendFeatureLoginPageModule } from '@ticket/frontend/feature/login-page';
@@ -13,6 +15,7 @@ import { appRoutes } from './app.routes';
     BrowserModule,
     RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
     FrontendFeatureLoginPageModule,
+    FrontendCoreGlobalFrameModule,
   ],
   providers: [
     {
