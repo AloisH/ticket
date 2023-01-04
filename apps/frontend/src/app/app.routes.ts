@@ -1,7 +1,7 @@
 import { IsNotSignGuard, IsSignGuard } from '@ticket/frontend/core/auth';
 
-import { GlobalFrameComponent } from '@ticket/frontend/core/global-frame';
 import { LoginPageComponent } from '@ticket/frontend/feature/login-page';
+import { NavbarComponent } from '@ticket/frontend/ui/navbar';
 import { Route } from '@angular/router';
 
 export const appRoutes: Route[] = [
@@ -12,7 +12,21 @@ export const appRoutes: Route[] = [
   },
   {
     path: '',
-    component: GlobalFrameComponent,
+    component: NavbarComponent,
     canActivate: [IsSignGuard],
+    children: [
+      {
+        path: '',
+        component: NavbarComponent,
+      },
+      {
+        path: 'ticket',
+        component: NavbarComponent,
+      },
+      {
+        path: 'me',
+        component: NavbarComponent,
+      },
+    ],
   },
 ];
