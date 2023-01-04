@@ -1,6 +1,7 @@
 import { IsNotSignGuard, IsSignGuard } from '@ticket/frontend/core/auth';
 
 import { LoginPageComponent } from '@ticket/frontend/feature/login-page';
+import { MePageComponent } from '@ticket/frontend/feature/me-page';
 import { NavbarComponent } from '@ticket/frontend/ui/navbar';
 import { Route } from '@angular/router';
 
@@ -25,7 +26,7 @@ export const appRoutes: Route[] = [
       },
       {
         path: 'me',
-        component: NavbarComponent,
+        component: MePageComponent,
       },
     ],
   },

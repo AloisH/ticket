@@ -32,6 +32,9 @@
       "@ticket/frontend/feature/login-page": [
         "libs/frontend/feature/login-page/src/index.ts"
       ],
+      "@ticket/frontend/feature/me-page": [
+        "libs/frontend/feature/me-page/src/index.ts"
+      ],
       "@ticket/frontend/ui/form": ["libs/frontend/ui/form/src/index.ts"],
       "@ticket/frontend/ui/navbar": ["libs/frontend/ui/navbar/src/index.ts"],
       "@ticket/private-api/core//database": [

@@ -2,6 +2,7 @@ import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FrontendCoreGlobalFrameModule } from '@ticket/frontend/core/global-frame';
 import { FrontendFeatureLoginPageModule } from '@ticket/frontend/feature/login-page';
+import { FrontendFeatureMePageModule } from '@ticket/frontend/feature/me-page';
 import { FrontendUiNavbarModule } from '@ticket/frontend/ui/navbar';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
@@ -17,6 +18,7 @@ import { appRoutes } from './app.routes';
     FrontendFeatureLoginPageModule,
     FrontendCoreGlobalFrameModule,
     FrontendUiNavbarModule,
+    FrontendFeatureMePageModule,
   ],
   providers: [
     {
