@@ -29,11 +29,17 @@
       "@ticket/frontend/core/local-storage": [
         "libs/frontend/core/local-storage/src/index.ts"
       ],
+      "@ticket/frontend/feature/dashboard-page": [
+        "libs/frontend/feature/dashboard-page/src/index.ts"
+      ],
       "@ticket/frontend/feature/login-page": [
         "libs/frontend/feature/login-page/src/index.ts"
       ],
       "@ticket/frontend/feature/me-page": [
         "libs/frontend/feature/me-page/src/index.ts"
+      ],
+      "@ticket/frontend/feature/ticket-page": [
+        "libs/frontend/feature/ticket-page/src/index.ts"
       ],
       "@ticket/frontend/ui/form": ["libs/frontend/ui/form/src/index.ts"],
       "@ticket/frontend/ui/navbar": ["libs/frontend/ui/navbar/src/index.ts"],
