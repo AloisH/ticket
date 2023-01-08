@@ -42,6 +42,7 @@
         "libs/frontend/feature/ticket-page/src/index.ts"
       ],
       "@ticket/frontend/ui/form": ["libs/frontend/ui/form/src/index.ts"],
+      "@ticket/frontend/ui/modal": ["libs/frontend/ui/modal/src/index.ts"],
       "@ticket/frontend/ui/navbar": ["libs/frontend/ui/navbar/src/index.ts"],
       "@ticket/private-api/core//database": [
         "libs/private-api/core/database/src/index.ts"

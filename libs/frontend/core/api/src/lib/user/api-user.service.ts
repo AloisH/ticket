@@ -16,7 +16,7 @@ export class ApiUserService extends ApiBaseService {
     return this.apiService.get(`${this.url}/me`);
   }
 
-  public updateMe(updateUserDto: UpdateUserDto) {
+  public updateMe(updateUserDto: UpdateUserDto): Observable<UserDto> {
     return this.apiService.post(`${this.url}/me`, updateUserDto);
   }
 }
