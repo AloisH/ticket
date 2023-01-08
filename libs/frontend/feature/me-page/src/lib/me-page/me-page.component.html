@@ -1,1 +1,22 @@
-<p>me-page works!</p>
+<div class="host">
+  <p-card>
+    <h1>Mon compte</h1>
+    <p>Email: {{ user?.email }}</p>
+    <p>Prénom: {{ user?.firstName }}</p>
+    <p>Nom: {{ user?.lastName }}</p>
+    <p>Rôle: {{ user?.role }}</p>
+
+    <button
+      pButton
+      label="Modifier mon compte"
+      class="p-button-primary"
+    ></button>
+
+    <button
+      pButton
+      label="Se déconnecter"
+      class="p-button-danger"
+      (click)="logout()"
+    ></button>
+  </p-card>
+</div>
