@@ -59,6 +59,9 @@
       "@ticket/private-api/feature/auth": [
         "libs/private-api/feature/auth/src/index.ts"
       ],
+      "@ticket/private-api/feature/category": [
+        "libs/private-api/feature/category/src/index.ts"
+      ],
       "@ticket/private-api/feature/user": [
         "libs/private-api/feature/user/src/index.ts"
       ]
