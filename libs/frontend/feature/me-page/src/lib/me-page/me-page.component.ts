@@ -32,7 +32,7 @@ export class MePageComponent implements OnInit {
   openEditUserModal() {
     this.modalService.createFormModal({
       title: 'Modifier mon profil',
-      fields: updateMeUserFormField,
+      fields: updateMeUserFormField(this.user),
       submitBtnText: 'Modifier',
       submit: this.submit(),
     });
