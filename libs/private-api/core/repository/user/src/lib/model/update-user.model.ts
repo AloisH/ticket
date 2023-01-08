@@ -5,4 +5,6 @@ export interface UpdateUserModel {
   permissionRole?: string;
   role?: string;
   refreshToken?: string;
+  lastName?: string;
+  firstName?: string;
 }
