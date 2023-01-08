@@ -53,6 +53,9 @@
       "@ticket/private-api/core/prisma": [
         "libs/private-api/core/prisma/src/index.ts"
       ],
+      "@ticket/private-api/core/repository/category": [
+        "libs/private-api/core/repository/category/src/index.ts"
+      ],
       "@ticket/private-api/core/repository/user": [
         "libs/private-api/core/repository/user/src/index.ts"
       ],

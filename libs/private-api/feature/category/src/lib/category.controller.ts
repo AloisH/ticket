@@ -19,7 +19,7 @@ export class CategoryController {
   }
 
   @Delete(':categoryId')
-  public async delete(@Param('categoryId') categoryId: string): Promise<boolean> {
+  public async delete(@Param('categoryId') categoryId: number): Promise<boolean> {
     return this.categoryService.delete(categoryId);
   }
 }
