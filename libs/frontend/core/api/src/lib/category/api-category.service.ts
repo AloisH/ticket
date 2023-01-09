@@ -1,8 +1,11 @@
+import { CategoryDto, CreateCategoryDto } from './api-category.dto';
+
 import { ApiBaseService } from '../api-base.service';
 import { ApiService } from '../api.service';
-import { CategoryDto } from './api-category.dto';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
+@Injectable({ providedIn: 'root' })
 export class ApiCategoryService extends ApiBaseService {
   constructor(apiService: ApiService) {
     super(apiService);
@@ -13,7 +16,7 @@ export class ApiCategoryService extends ApiBaseService {
     return this.apiService.get(this.url);
   }
 
-  public create(categoryDto: CategoryDto): Observable<CategoryDto> {
+  public create(categoryDto: CreateCategoryDto): Observable<CategoryDto> {
     return this.apiService.post(this.url, categoryDto);
   }
 

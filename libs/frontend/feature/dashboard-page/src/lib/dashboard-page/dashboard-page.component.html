@@ -1,1 +1,26 @@
-<p>dashboard-page works!</p>
+<div class="host">
+  <div class="category">
+    <div class="header">
+      <h2>Créer un nouveau ticket</h2>
+      <button
+        pButton
+        pRipple
+        type="button"
+        icon="pi pi-plus"
+        class="p-button-rounded"
+        (click)="openModalCreateCategory()"
+      ></button>
+    </div>
+    <div class="content">
+      <div *ngFor="let cateogry of categories">
+        <button
+          pButton
+          pRipple
+          type="button"
+          label="{{ cateogry.name }}"
+          class="p-button-raised"
+        ></button>
+      </div>
+    </div>
+  </div>
+</div>
