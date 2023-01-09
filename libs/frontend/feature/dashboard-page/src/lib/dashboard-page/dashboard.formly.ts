@@ -14,4 +14,12 @@ export const createCategoryFormField: FormlyFieldConfig[] = [
       required: true,
     },
   },
+  {
+    key: 'iconName',
+    type: FormType.Input,
+    props: {
+      label: 'Icon',
+      required: false,
+    },
+  },
 ];

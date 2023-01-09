@@ -12,12 +12,13 @@
       ></button>
     </div>
     <div class="content">
-      <div *ngFor="let cateogry of categories">
+      <div *ngFor="let category of categories">
         <button
           pButton
           pRipple
           type="button"
-          label="{{ cateogry.name }}"
+          icon="{{ category.iconName ? 'pi ' + category.iconName : undefined }}"
+          label="{{ category.name }}"
           class="p-button-raised"
         ></button>
       </div>
