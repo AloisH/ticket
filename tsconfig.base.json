@@ -56,6 +56,9 @@
       "@ticket/private-api/core/repository/category": [
         "libs/private-api/core/repository/category/src/index.ts"
       ],
+      "@ticket/private-api/core/repository/ticket": [
+        "libs/private-api/core/repository/ticket/src/index.ts"
+      ],
       "@ticket/private-api/core/repository/user": [
         "libs/private-api/core/repository/user/src/index.ts"
       ],

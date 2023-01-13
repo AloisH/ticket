@@ -4,6 +4,7 @@ import { APP_GUARD } from '@nestjs/core';
 import { Module } from '@nestjs/common';
 import { PrivateApiFeatureAuthModule } from '@ticket/private-api/feature/auth';
 import { PrivateApiFeatureCategoryModule } from '@ticket/private-api/feature/category';
+import { PrivateApiFeatureTicketModule } from '@ticket/private-api/feature/ticket';
 import { PrivateApiFeatureUserModule } from '@ticket/private-api/feature/user';
 
 @Module({
@@ -12,6 +13,7 @@ import { PrivateApiFeatureUserModule } from '@ticket/private-api/feature/user';
     PrivateApiFeatureAuthModule,
     PrivateApiFeatureUserModule,
     PrivateApiFeatureCategoryModule,
+    PrivateApiFeatureTicketModule,
   ],
   providers: [
     {
