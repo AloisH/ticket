@@ -1,8 +1,10 @@
 import { Module } from '@nestjs/common';
+import { TicketController } from './ticket.controller';
+import { TicketService } from './ticket.service';
 
 @Module({
-  controllers: [],
-  providers: [],
+  controllers: [TicketController],
+  providers: [TicketService],
   exports: [],
 })
 export class PrivateApiFeatureTicketModule {}
