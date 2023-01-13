@@ -20,6 +20,7 @@
           icon="{{ category.iconName ? 'pi ' + category.iconName : undefined }}"
           label="{{ category.name }}"
           class="p-button-raised"
+          (click)="openModalCreateTicket(category.id)"
         ></button>
       </div>
     </div>

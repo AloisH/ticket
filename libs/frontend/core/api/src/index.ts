@@ -5,3 +5,5 @@ export * from './lib/user/api-user.dto';
 export * from './lib/user/api-user.service';
 export * from './lib/category/api-category.dto';
 export * from './lib/category/api-category.service';
+export * from './lib/ticket/api-ticket.dto';
+export * from './lib/ticket/api-ticket.service';

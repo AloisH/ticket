@@ -1,6 +1,11 @@
-import { ApiCategoryService, CategoryDto } from '@ticket/frontend/core/api';
+import { ApiCategoryService, ApiTicketService, CategoryDto } from '@ticket/frontend/core/api';
 import { Component, OnInit } from '@angular/core';
-import { CreateCategoryForm, createCategoryFormField } from './dashboard.formly';
+import {
+  CreateCategoryForm,
+  createCategoryFormField,
+  createTicketForm,
+  createTicketFormField,
+} from './dashboard.formly';
 
 import { ModalService } from '@ticket/frontend/ui/modal';
 
@@ -12,7 +17,11 @@ import { ModalService } from '@ticket/frontend/ui/modal';
 export class DashboardPageComponent implements OnInit {
   categories: CategoryDto[];
 
-  constructor(private readonly apiCategoryService: ApiCategoryService, private readonly modalService: ModalService) {
+  constructor(
+    private readonly apiCategoryService: ApiCategoryService,
+    private readonly apiTicketService: ApiTicketService,
+    private readonly modalService: ModalService
+  ) {
     this.categories = [];
   }
 
@@ -38,6 +47,21 @@ export class DashboardPageComponent implements OnInit {
   createCatogory(model: CreateCategoryForm) {
     this.apiCategoryService.create(model).subscribe((category) => {
       this.categories.push(category);
+    });
+  }
+
+  openModalCreateTicket(cateogryId: number) {
+    this.modalService.createFormModal({
+      title: 'Créer un nouveau ticket',
+      fields: createTicketFormField,
+      submitBtnText: 'Créer le ticket',
+      submit: (model: createTicketForm) => this.createTicket(model, cateogryId),
+    });
+  }
+
+  createTicket(model: createTicketForm, categoryId: number) {
+    this.apiTicketService.create({ ...model, categoryId }).subscribe((ticket) => {
+      console.log(ticket);
     });
   }
 }

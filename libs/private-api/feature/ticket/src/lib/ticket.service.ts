@@ -10,6 +10,10 @@ export class TicketService {
   }
 
   public async createDto(userId: number, createTicketDto: CreateTicketDto): Promise<TicketDto> {
-    return this.ticketRepository.create({ ...createTicketDto, authorId: userId });
+    return this.ticketRepository.create({
+      status: createTicketDto.status,
+      categoryId: createTicketDto.categoryId,
+      authorId: userId,
+    });
   }
 }

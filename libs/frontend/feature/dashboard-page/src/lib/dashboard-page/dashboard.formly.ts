@@ -23,3 +23,27 @@ export const createCategoryFormField: FormlyFieldConfig[] = [
     },
   },
 ];
+
+export interface createTicketForm {
+  status: string;
+  content: string;
+}
+
+export const createTicketFormField: FormlyFieldConfig[] = [
+  {
+    key: 'status',
+    type: FormType.Input,
+    props: {
+      label: 'Status',
+      required: true,
+    },
+  },
+  {
+    key: 'content',
+    type: FormType.Input,
+    props: {
+      label: 'Content',
+      required: true,
+    },
+  },
+];

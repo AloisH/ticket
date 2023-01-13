@@ -4,7 +4,7 @@ export interface CreateCategoryDto {
 }
 
 export interface CategoryDto {
-  id: string;
+  id: number;
   name: string;
   iconName?: string;
 }
