@@ -1,6 +1,8 @@
 <div class="host">
   <p-card>
-    <h1>Mon compte</h1>
+    <ng-template pTemplate="header">
+      <h2 class="header">Mon compte</h2>
+    </ng-template>
     <div class="field">
       <label>Email</label>
       <input pInputText type="text" [value]="user?.email" readonly disabled />
